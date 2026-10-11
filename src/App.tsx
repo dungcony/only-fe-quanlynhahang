@@ -1,4 +1,4 @@
-﻿import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from '@/context/AuthContext';
 import ProtectedRoute from '@/routes/ProtectedRoute';
 import GuestOrCustomerRoute from '@/routes/GuestOrCustomerRoute';
@@ -48,7 +48,7 @@ import KitchenDashboard from '@/pages/Kitchen/KitchenDashboard';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <Routes>
           {/* LUONG KHACH HANG */}
@@ -120,6 +120,6 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

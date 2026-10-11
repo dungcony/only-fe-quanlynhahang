@@ -4,6 +4,7 @@ import path from 'path';
 
 // FE gọi backend bằng địa chỉ tuyệt đối trong VITE_API_BASE_URL (xem helpers/axiosClient.ts) nên không cần proxy dev
 export default defineConfig({
+  base: './',
   plugins: [react()],
   resolve: {
     alias: {
